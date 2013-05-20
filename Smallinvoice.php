@@ -1273,7 +1273,7 @@ class Smallinvoice
     private function execute($sKeyword, $aBodyParameters = array(), $sFile = false)
     {
         /* put together parameters */
-        $aData = array();
+        $aData         = array();
         $aData['data'] = json_encode($aBodyParameters);
         if ($sFile) $aData['file'] = '@' . $sFile;
 
@@ -1284,11 +1284,10 @@ class Smallinvoice
             'token',
             $this->sToken
         );
-        $sURL = implode('/', $aURLParts);
+        $sURL      = implode('/', $aURLParts);
 
         /* data may not be empty */
-        if (isset($aData['data']) && (count(json_decode($aData['data'])) == 0 || $aData['data'] == ''))
-        {
+        if (isset($aData['data']) && (count(json_decode($aData['data'])) == 0 || $aData['data'] == '')) {
             unset($aData['data']);
         }
 
@@ -1308,24 +1307,19 @@ class Smallinvoice
 
         $mResponse = curl_exec($objCurlConn);
 
-        if ($mResponse===FALSE)
-        {
+        if ($mResponse === FALSE) {
             throw new Exception('An error occured with the curl connection: ' . curl_error($objCurlConn));
         }
 
         /* if PDF or Image, output plain result */
-        if (substr($mResponse, 0, 4)=='%PDF' || substr($mResponse, 1, 3)=='PNG')
-        {
+        if (substr($mResponse, 0, 4) == '%PDF' || substr($mResponse, 1, 3) == 'PNG') {
             return $mResponse;
         }
 
         $objResponse = json_decode($mResponse);
-        if ($objResponse->error)
-        {
+        if ($objResponse->error) {
             throw new Exception($objResponse->errormessage, $objResponse->errorcode);
-        }
-        else
-        {
+        } else {
             return $objResponse;
         }
     }
@@ -1334,19 +1328,15 @@ class Smallinvoice
     {
         $aSets = array();
 
-        foreach ($aFilters as $sFilter => $sValue)
-        {
+        foreach ($aFilters as $sFilter => $sValue) {
             $aSets[] = "{$sFilter}:{$sValue}";
         }
 
         $sFilter = implode(';', $aSets);
 
-        if ($sFilter)
-        {
+        if ($sFilter) {
             return "/filter/$sFilter";
-        }
-        else
-        {
+        } else {
             return '';
         }
     }
