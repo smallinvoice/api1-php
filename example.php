@@ -69,9 +69,9 @@ try {
     $objInvoiceResponse = $objSmallinvoice->invoice_add($objInvoice);
 
     /*
-     * Sending an invoice
+     * Sending an invoice via post, priority
      */
-    $objSmallinvoice->invoice_post($objInvoiceResponse->id, new ArrayObject(array('speed' => 1)));
+    //$objSmallinvoice->invoice_post($objInvoiceResponse->id, new ArrayObject(array('speed' => 1, 'color' => 1)));
 
 } catch (Exception $e) {
     echo 'An error occured with number <b>' . $e->getCode() . '</b> and message <b>' . $e->getMessage() . '</b>';
