@@ -3,9 +3,9 @@
 ## What is this?
 The official PHP-Class for using the invoicing service smallinvoice.com
 
-* For more information about smallinvoice and how to use it see <http://www.smallinvoice.com/>
+* For more information about smallinvoice and how to use it see <https://www.smallinvoice.ch/>
 
-* API documentation can be found at <http://www.smallinvoice.ch/api/general/overview>
+* API documentation can be found at <https://www.smallinvoice.ch/api/general/overview>
 
 ## Author
 Graem Lourens <graem.lourens@lourenssystems.ch>
