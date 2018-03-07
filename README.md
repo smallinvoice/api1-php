@@ -12,7 +12,7 @@ Graem Lourens <graem.lourens@lourenssystems.ch>
 
 ## License
 
-Copyright (c) 2013, Lourens Systems GmbH
+Copyright (c) 2018, Lourens Systems GmbH
 All rights reserved.
 
 Redistribution and use in source and binary forms, with or without
