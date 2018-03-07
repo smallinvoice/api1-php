@@ -1,10 +1,9 @@
-To run this examples first run:
+To run this example first run (in this directory)
 ```
 composer install
 ```
-in this directory.
 
-Next:
+Next run:
 ```$xslt
 php src/InvoiceAdd.php
 ```
