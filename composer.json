@@ -1,0 +1,16 @@
+{
+    "name": "smallinvoice/api1-php",
+    "description": "Official PHP wrapper for smallinvoice API V1.",
+    "type": "library",
+    "authors": [
+        {
+            "name": "smallinvoice",
+            "email": "support@smallinvoice.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {},
+    "psr-4": {
+        "smallinvoice\\": "src/"
+    }
+}
