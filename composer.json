@@ -10,7 +10,9 @@
     ],
     "minimum-stability": "dev",
     "require": {},
-    "psr-4": {
-        "smallinvoice\\": "src/"
+    "autoload": {
+        "psr-4": {
+            "smallinvoice\\": "src/"
+        }
     }
 }
